@@ -1,5 +1,5 @@
 #The name of the release
-name: Release v1.0.5
+name: Release v1.0.6
 #Declaring the branches and tags
 on:
   push:
@@ -8,7 +8,7 @@ on:
 #Declaring all jobs and flows
 jobs:
   release:
-    name: Release v1.0.5
+    name: Release v1.0.6
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -24,11 +24,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         with:
-          tag_name: v1.0.5
-          release_name: Iqraa v1.0.5
+          tag_name: v1.0.6
+          release_name: Iqraa v1.0.6
           body: |
             Changes in this Release:
-              - [New] Release new version v1.0.5
-              - [Update] Added final release date
+              - [New] Release new version v1.0.6
+              - [Update] Final release date
           draft: false
           prerelease: false
