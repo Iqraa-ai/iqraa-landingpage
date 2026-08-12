@@ -27,6 +27,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    if: "github.actor != 'github-actions[bot]' && !contains(github.event.head_commit.message, '[sonar]') && !contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
