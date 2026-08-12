@@ -27,7 +27,7 @@ jobs:
 
       - name: Push Empty Commit
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "Abdulrazak Othman"
+          git config --global user.email "aa.othman01@gmail.com"
           git commit --allow-empty -m "chore: sonar scan completed [skip ci]"
           git push
