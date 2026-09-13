@@ -12,7 +12,7 @@ jobs:
     if: "github.actor != 'github-actions[bot]' && !contains(github.event.head_commit.message, '[sonar]') && !contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     steps:
       #Checkout Code
       - name: Checkout code
