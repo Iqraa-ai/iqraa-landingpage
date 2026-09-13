@@ -1,13 +1,13 @@
-name: SonarCloud Analysis
+name: SonarQube Analysis
 
 on:
   schedule:
-    - cron: '0 15 * * *'
+    - cron: '0 13 * * *'
   workflow_dispatch:
 
 jobs:
   sonarcloud:
-    name: SonarCloud Scan
+    name: SonarQube Scan
     runs-on: ubuntu-latest
 
     permissions:
@@ -29,5 +29,5 @@ jobs:
         run: |
           git config --global user.name "Abdulrazak Othman"
           git config --global user.email "aa.othman01@gmail.com"
-          git commit --allow-empty -m "chore: sonar scan completed [skip ci]"
+          git commit --allow-empty -m "SonarQube Scan Completed!"
           git push
