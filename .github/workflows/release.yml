@@ -1,5 +1,5 @@
 #The name of the release
-name: Release v1.0.9
+name: Release v1.0.10
 #Declaring the branches and tags
 on:
   push:
@@ -8,7 +8,7 @@ on:
 #Declaring all jobs and flows
 jobs:
   release:
-    name: Release v1.0.9
+    name: Release v1.0.10
     if: "github.actor != 'github-actions[bot]' && !contains(github.event.head_commit.message, '[sonar]') && !contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     permissions:
@@ -25,12 +25,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v1.0.9
-          release_name: Iqraa v1.0.9
+          tag_name: v1.0.10
+          release_name: Iqraa v1.0.10
           body: |
             Changes in this Release:
-              - [New] Release new version v1.0.9
-              - [New] New final release date
-              - [Update] Enhancing SonarQube skip condition
+              - [New] Release new version v1.0.10
+              - [New] JRE metadata fetch bug fix
           draft: false
           prerelease: false
